@@ -11,10 +11,10 @@ const leaders = [
   { 
     name: 'Yussuf Mugane', 
     title: 'National Convener', 
-    image: '/leaders/yussuf.jpeg'
+    image: '/leaders/yussuf1.jpeg'
   },
   { 
-    name: 'Jakim Okoth - Tsunami', 
+    name: 'Jackim Okoth - Tsunami', 
     title: 'Chairperson', 
     image: '/leaders/kim.jpeg'
   },

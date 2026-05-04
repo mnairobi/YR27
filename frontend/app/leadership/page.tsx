@@ -14,11 +14,11 @@ const nationalLeaders = [
     name: 'YUSSUF MUGANE', 
     title: 'National Convener', 
     initials: 'YM', 
-    image: '/leaders/yussuf.jpeg',
+    image: '/leaders/yussuf1.jpeg',
     order: 1 
   },
   { 
-    name: 'JAKIM OKOTH - TSUNAMI', 
+    name: 'JACKIM OKOTH - TSUNAMI', 
     title: 'Chairperson', 
     initials: 'AK', 
     image: '/leaders/kim.jpeg',
