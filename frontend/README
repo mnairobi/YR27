@@ -1,0 +1,26 @@
+# YR27 – Youths for Ruto 2027
+
+**"Youth Power. National Power. 2027 – Ruto Tena."**
+
+Full-stack political youth movement website built with:
+- **Frontend:** Next.js 14, TypeScript, Tailwind CSS, Framer Motion
+- **Backend:** Django 5, Django REST Framework, SQLite
+
+## 🏛️ Leadership
+- **National Convener:** Yussuf Mugane
+- **Chairperson:** Alex Kiorop
+- **Deputy Chairperson:** Onesmus Nyaga
+
+## 🚀 Setup
+
+### Backend
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate    # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py makemigrations core
+python manage.py migrate
+python manage.py seed_data     # Seeds counties, leaders, agenda
+python manage.py createsuperuser
+python manage.py runserver     # → http://localhost:8000

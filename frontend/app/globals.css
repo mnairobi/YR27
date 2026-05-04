@@ -1,0 +1,129 @@
+/* ── Google Fonts — MUST be first line ──────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+
+  /* ── Buttons ─────────────────────────────────────────────────── */
+  .btn-yellow {
+    @apply inline-flex items-center justify-center gap-2
+           bg-uda-yellow text-uda-black font-bold
+           px-8 py-3 rounded-full text-sm uppercase tracking-wider
+           hover:bg-uda-yellow-hover active:scale-95
+           transition-all duration-300 shadow-lg hover:shadow-xl;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-green {
+    @apply inline-flex items-center justify-center gap-2
+           bg-uda-green text-white font-bold
+           px-8 py-3 rounded-full text-sm uppercase tracking-wider
+           hover:bg-uda-green-hover active:scale-95
+           transition-all duration-300 shadow-lg hover:shadow-xl;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-red {
+    @apply inline-flex items-center justify-center gap-2
+           bg-uda-red text-white font-bold
+           px-8 py-3 rounded-full text-sm uppercase tracking-wider
+           hover:bg-uda-red-hover active:scale-95
+           transition-all duration-300 shadow-lg hover:shadow-xl;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-outline-yellow {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-uda-yellow text-uda-yellow font-bold
+           px-8 py-3 rounded-full text-sm uppercase tracking-wider
+           hover:bg-uda-yellow hover:text-uda-black
+           transition-all duration-300;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-white text-white font-bold
+           px-8 py-3 rounded-full text-sm uppercase tracking-wider
+           hover:bg-white hover:text-uda-black
+           transition-all duration-300;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* ── Input ───────────────────────────────────────────────────── */
+  .input-field {
+    @apply w-full px-5 py-3 bg-white border-2 border-gray-200 rounded-xl
+           text-gray-800 placeholder-gray-400
+           focus:border-uda-yellow focus:outline-none
+           focus:ring-2 focus:ring-uda-yellow/20
+           transition-all duration-300;
+  }
+
+  /* ── Card ────────────────────────────────────────────────────── */
+  .card-hover {
+    @apply bg-white rounded-2xl shadow-md overflow-hidden
+           hover:shadow-2xl hover:-translate-y-1
+           transition-all duration-500;
+  }
+
+  /* ── Stripes ─────────────────────────────────────────────────── */
+  .kenya-stripe {
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      #006B3F 33.3%,
+      #111111 33.3%,
+      #111111 66.6%,
+      #C8102E 66.6%
+    );
+  }
+
+  .uda-stripe {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(to right, #FFD700, #006B3F, #C8102E);
+  }
+
+  /* ── Glass ───────────────────────────────────────────────────── */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+  }
+
+  /* ── Section padding ─────────────────────────────────────────── */
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #006B3F; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #004D2D; }
+
+/* ── Text selection ──────────────────────────────────────────────────── */
+::selection { background: #FFD700; color: #111111; }
