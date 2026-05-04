@@ -4,8 +4,8 @@ export const SITE = {
   tagline: 'Youth Power. National Power. 2027 – Ruto Tena.',
   motto: 'From Campus to Country.',
   email: 'info@yr27movement.co.ke',
-  phone: '+254 XXX XXX XXX',
-  whatsapp: '254700000000',
+  phone: '+254 787 045050',
+  whatsapp: '254787045050',
 }
 
 export const NAV_LINKS = [

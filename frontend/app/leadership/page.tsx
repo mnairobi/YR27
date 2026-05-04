@@ -4,12 +4,34 @@ import { FaUserTie, FaMapMarkerAlt, FaUsers } from 'react-icons/fa'
 import SectionHeader from '../../components/ui/SectionHeader'
 import KenyaStripe from '../../components/ui/KenyaStripe'
 
+// const nationalLeaders = [
+//   { name: 'Yussuf Mugane', title: 'National Convener', initials: 'YM', order: 1 },
+//   { name: 'Alex Kiorop', title: 'Chairperson', initials: 'AK', order: 2 },
+//   { name: 'Onesmus Nyaga', title: 'Deputy Chairperson', initials: 'ON', order: 3 },
+// ]
 const nationalLeaders = [
-  { name: 'Yussuf Mugane', title: 'National Convener', initials: 'YM', order: 1 },
-  { name: 'Alex Kiorop', title: 'Chairperson', initials: 'AK', order: 2 },
-  { name: 'Onesmus Nyaga', title: 'Deputy Chairperson', initials: 'ON', order: 3 },
+  { 
+    name: 'YUSSUF MUGANE', 
+    title: 'National Convener', 
+    initials: 'YM', 
+    image: '/leaders/yussuf.jpeg',
+    order: 1 
+  },
+  { 
+    name: 'JAKIM OKOTH - TSUNAMI', 
+    title: 'Chairperson', 
+    initials: 'AK', 
+    image: '/leaders/kim.jpeg',
+    order: 2 
+  },
+  { 
+    name: 'ONESMUS NYAGA', 
+    title: 'Deputy Chairperson', 
+    initials: 'ON', 
+    image: '/leaders/ones.jpeg',
+    order: 3 
+  },
 ]
-
 const levels = [
   {
     icon: FaUserTie,
@@ -61,9 +83,19 @@ export default function LeadershipPage() {
                 transition={{ delay: i * 0.15 }}
                 className="card-hover text-center p-10"
               >
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-uda-green via-uda-black to-uda-green flex items-center justify-center text-white font-heading font-black text-4xl shadow-2xl">
-                  {leader.initials}
-                </div>
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl">
+  {leader.image ? (
+    <img
+      src={leader.image}
+      alt={leader.name}
+      className="w-full h-full object-cover"
+    />
+  ) : (
+    <div className="w-full h-full bg-gradient-to-br from-uda-green via-uda-black to-uda-green flex items-center justify-center text-white font-heading font-black text-4xl">
+      {leader.initials}
+    </div>
+  )}
+</div>
                 <h3 className="font-heading font-bold text-2xl text-gray-900">{leader.name}</h3>
                 <p className="text-uda-green font-bold mt-2">{leader.title}</p>
                 <div className="mt-4 inline-flex items-center gap-1 bg-uda-yellow/10 text-uda-green text-xs font-bold px-4 py-1.5 rounded-full">
